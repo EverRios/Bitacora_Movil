@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="#ff2432fa"
+    card_view:cardCornerRadius="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:id="@+id/id_persona"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE"
+            android:id="@+id/nommbre_c"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APELLIDOS"
+            android:id="@+id/apellidos_c"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/nivel_c"
+            android:layout_toEndOf="@+id/nivel_c" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIPO"
+            android:id="@+id/tipo_c"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/nivel_c" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIVEL"
+            android:id="@+id/nivel_c"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="80dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MODULO"
+            android:id="@+id/modulo_c"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="190dp"
+            android:layout_alignTop="@+id/nivel_c"
+             />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

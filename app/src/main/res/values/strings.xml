@@ -7,7 +7,6 @@
     <string name="title_activity_bienvenido">bienvenido</string>
     <string name="inicio">REGISTRO DE APLICACION DE EXAMEN </string>
     <string name="Bienvenido">BIENVENIDO</string>
-
     <string name="id_usuario">ID del Usuario:</string>
     <string name="nombres">NOMBRE:</string>
     <string name="apellidos">APELLIDOS:</string>
@@ -21,6 +20,8 @@
     <string name="consulta">Consultar</string>
     <string name="modificar">Modificar</string>
     <string name="limpiar">Limpiar</string>
+    <string name="ver">Registros</string>
 
+    <string name="title_activity_registros">registros</string>
 
 </resources>

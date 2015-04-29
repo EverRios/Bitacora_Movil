@@ -159,6 +159,13 @@
                 android:id="@+id/btn_limpiar"
                 android:onClick="limpia"
                 android:layout_weight="1" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver"
+                android:id="@+id/btn_ver"
+                android:onClick="ver"
+                android:layout_weight="1" />
 
         </LinearLayout>
 

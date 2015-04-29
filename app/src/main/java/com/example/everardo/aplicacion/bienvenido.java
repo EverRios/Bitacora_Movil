@@ -3,6 +3,7 @@ package com.example.everardo.aplicacion;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -80,6 +81,7 @@ public class bienvenido extends Activity implements View.OnClickListener {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "usuarios", null, 1); SQLiteDatabase bd = admin.getWritableDatabase();
         String idusuario = et_idusuario.getText().toString();
         // muestra el registro guardado
+
         Cursor fila = bd.rawQuery("select user, password, nombre, apellido_p, apellido_m from usuarios where id_usuario=" + idusuario, null);
         if (fila.moveToFirst()) {
             et_nombres.setText(fila.getString(0));
@@ -158,6 +160,12 @@ public class bienvenido extends Activity implements View.OnClickListener {
         et_tipo.setText("");
         et_nivel.setText("");
         et_modulo.setText("");
+
+
+    }
+    public void  ver(View v){
+        Intent intent = new Intent(this, registros.class);
+        startActivity(intent);
 
 
     }
