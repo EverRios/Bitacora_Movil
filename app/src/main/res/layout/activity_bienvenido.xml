@@ -7,12 +7,14 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    tools:context="com.example.everardo.aplicacion.bienvenido">
+    tools:context="com.example.everardo.aplicacion.bienvenido"
+    android:background="#fff4c23f">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#fff1993b">
         <TextView
             android:id="@+id/textViewinicio"
             android:layout_width="wrap_content"
@@ -38,27 +40,44 @@
             android:layout_gravity="center_horizontal"
             android:text="" />
 
-////////    Campos de la base
+    <!--Campos de la base-->
 
         <TextView
             android:text="@string/id_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_idusuario"
-            android:inputType="phone" android:digits="1234567890"/>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="32dp"
+            android:id="@+id/et_idusuario"
+            android:inputType="phone" android:digits="1234567890"
+            android:background="#ffffffff"
+            android:layout_weight="0.75" />
+        <Button
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:text="@string/consulta"
+            android:id="@+id/btn_consultar"
+            android:onClick="consulta"
+            android:drawableLeft="@android:drawable/ic_menu_search" />
+        </LinearLayout>
 
         <TextView
             android:text="@string/nombres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_nombres" />
+            android:layout_width="335dp"
+            android:layout_height="32dp"
+            android:id="@+id/et_nombres"
+            android:background="#ffffffff" />
 
 
         <TextView
@@ -66,61 +85,139 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_apellidos"/>
-        //android:inputType="textPassword" />
+            android:layout_width="335dp"
+            android:layout_height="33dp"
+            android:id="@+id/et_apellidos"
+            android:background="#ffffffff" />
+        <!--android:inputType="textPassword" />-->
 
 
         <TextView
             android:text="@string/tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
         <EditText
             android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:id="@+id/et_tipo"
+            android:visibility="invisible"
+           />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/et_tipo" />
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+
+            <CheckBox
+                android:text="@string/escrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:id="@+id/rdescrito"
+                android:onClick="escrito"/>
+            <CheckBox
+                android:text="@string/linea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/rdlinea"
+                android:onClick="linea"/>
+
+        </LinearLayout>
 
         <TextView
             android:text="@string/nivel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_nivel" />
+            android:layout_height="5dp"
+            android:id="@+id/et_nivel"
+            android:visibility="invisible"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
 
+
+        <CheckBox
+            android:text="@string/inicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/rdinicial"
+            android:onClick="inicial"/>
+        <CheckBox
+            android:text="@string/intermedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/rdintermedio"
+            android:onClick="intermedio"/>
+
+        <CheckBox
+            android:text="@string/avanzado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/rdavanzado"
+            android:onClick="avanzado"
+            android:layout_weight="0.16" />
+    </LinearLayout>
         <TextView
-            android:text="@string/modulo"
+            android:text="@string/fecha_apli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_modulo" />
+            android:layout_width="337dp"
+            android:layout_height="33dp"
+            android:id="@+id/et_fecha"
+            android:onClick="Fecha_1"
+            android:background="#ffffffff" />
+        <TextView
+            android:text="@string/Modulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="338dp"
+            android:layout_height="32dp"
+            android:id="@+id/et_modulo"
+            android:background="#ffffffff" />
+
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal">
 
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="152dp"
+                android:layout_height="50dp"
                 android:text="@string/alta"
+                android:layout_gravity="center_horizontal"
                 android:id="@+id/btn_alta"
                 android:onClick="alta"
-                android:layout_weight="1" />
+                android:drawableRight="@android:drawable/ic_menu_save" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/consulta"
-                android:id="@+id/btn_consultar"
-                android:onClick="consulta"
-                android:layout_weight="1" />
+
 
         </LinearLayout>
 
@@ -135,7 +232,8 @@
                 android:text="@string/baja"
                 android:id="@+id/btn_baja"
                 android:onClick="baja"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:drawableRight="@android:drawable/ic_menu_delete" />
 
             <Button
                 android:layout_width="0dp"
@@ -143,7 +241,8 @@
                 android:text="@string/modificar"
                 android:id="@+id/btn_modificar"
                 android:onClick="modificacion"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:drawableRight="@android:drawable/ic_menu_edit" />
 
         </LinearLayout>
 
@@ -158,14 +257,16 @@
                 android:text="@string/limpiar"
                 android:id="@+id/btn_limpiar"
                 android:onClick="limpia"
-                android:layout_weight="1" />
+                android:layout_weight="0.57"
+                android:drawableRight="@android:drawable/ic_input_delete" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ver"
                 android:id="@+id/btn_ver"
                 android:onClick="ver"
-                android:layout_weight="1" />
+                android:layout_weight="0.42"
+                android:drawableRight="@android:drawable/ic_menu_view" />
 
         </LinearLayout>
 

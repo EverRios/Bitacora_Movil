@@ -3,25 +3,41 @@
 
     <string name="app_name">Bitacora INEA</string>
     <string name="hello_world">INICIAR SESION</string>
-    <string name="action_settings">Settings</string>
+
     <string name="title_activity_bienvenido">bienvenido</string>
     <string name="inicio">REGISTRO DE APLICACION DE EXAMEN </string>
     <string name="Bienvenido">BIENVENIDO</string>
-    <string name="id_usuario">ID del Usuario:</string>
+    <string name="id_usuario">ID:</string>
     <string name="nombres">NOMBRE:</string>
     <string name="apellidos">APELLIDOS:</string>
     <string name="tipo">TIPO DE EXAMEN:</string>
     <string name="nivel">NIVEL DE EXAMEN:</string>
     <string name="modulo">MODULO:</string>
+    <string name="fecha_apli">FECHA</string>
+    <string name="fechaConsulta">FECHA</string>
     <string name="email">E-Mail:</string>
-
+    <string name="escrito">Escrito</string>
+    <string name="linea">Linea</string>
+    <string name="inicial">Inicial</string>
+    <string name="intermedio">Intermedio</string>
+    <string name="avanzado">Avanzado</string>
     <string name="alta">Alta</string>
     <string name="baja">Baja</string>
-    <string name="consulta">Consultar</string>
+    <string name="consulta"></string>
     <string name="modificar">Modificar</string>
     <string name="limpiar">Limpiar</string>
     <string name="ver">Registros</string>
-
-    <string name="title_activity_registros">registros</string>
+    <string name="buscar">Buscar</string>
+    <string name="fecha"></string>
+    <string name="title_activity_registros">Lista De Registros</string>
+    <string name="Modulo">MODULO:</string>
+    <string name="idpersona"> ID persona</string>
+    <string name="nombre">NOMBRE:</string>
+    <string name="fechac">FECHA:</string>
+    <string name="title_activity_acerca">Acerca De...</string>
+    <string name="desarr">DESARROLLADOR</string>
+    <string name="user">Programador y Diseñador: Everardo Rios Ibarra</string>
+    <string name="correo">EMAIL: eve_rivers12@hotmail.com</string>
+    <string name="movil">MOVIL: (+52)732110529</string>
 
 </resources>

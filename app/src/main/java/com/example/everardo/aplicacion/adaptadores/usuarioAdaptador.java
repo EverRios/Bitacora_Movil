@@ -25,17 +25,20 @@ public class usuarioAdaptador extends RecyclerView.Adapter<usuarioAdaptador.usua
         public TextView apellidos;
         public TextView tipo;
         public TextView nivel;
-        public TextView modulo;
+        public TextView fecha;
+        public  TextView modulo;
 
 ///Agregar el usuarioViewHolder---
         public usuarioViewHolder(View v) {
             super(v);
+            //Se enlaza los TextView
             id_persona = (TextView) v.findViewById(R.id.id_persona);
             nombre= (TextView) v.findViewById(R.id.nommbre_c);
             apellidos = (TextView) v.findViewById(R.id.apellidos_c);
             tipo = (TextView) v.findViewById(R.id.tipo_c);
             nivel = (TextView) v.findViewById(R.id.nivel_c);
-            modulo = (TextView) v.findViewById(R.id.modulo_c);
+            fecha = (TextView) v.findViewById(R.id.fecha_c);
+            modulo = (TextView)v.findViewById(R.id.modulo_c);
         }
     }
 
@@ -50,20 +53,22 @@ public class usuarioAdaptador extends RecyclerView.Adapter<usuarioAdaptador.usua
     @Override
     public usuarioViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
        //Agregar el LayoutInflanter de la tarjeta
+        //se agrega la actividad con la cual se tendra la comunicacion.
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.usuarios_card, viewGroup, false);
         return new usuarioViewHolder(v);
     }
-
+    // Metodo para enviar los datos al CardView
     @Override
-    public void onBindViewHolder(usuarioViewHolder usuarioViewHolder, int i) {
+    public void onBindViewHolder(usuarioViewHolder   usuarioViewHolder, int i) {
         //// muestra los registros en la vista
 
-        usuarioViewHolder.id_persona.setText("ID:"+String.valueOf(items.get(i).getIdusuario()));
-        usuarioViewHolder.nombre.setText("NOMBRE:"+String.valueOf(items.get(i).getNombres()));
-        usuarioViewHolder.apellidos.setText("APELLIDOS:"+String.valueOf(items.get(i).getApellidos()));
-        usuarioViewHolder.tipo.setText("TIPO:"+String.valueOf(items.get(i).getTipo()));
-        usuarioViewHolder.nivel.setText("NIVEL:"+String.valueOf(items.get(i).getNivel()));
-        usuarioViewHolder.modulo.setText("MODULO:"+String.valueOf(items.get(i).getModulo()));
+        usuarioViewHolder.id_persona.setText(" "+String.valueOf(items.get(i).getIdusuario()));
+        usuarioViewHolder.nombre.setText(" "+String.valueOf(items.get(i).getNombres()));
+        usuarioViewHolder.apellidos.setText(" "+String.valueOf(items.get(i).getApellidos()));
+        usuarioViewHolder.tipo.setText(" "+String.valueOf(items.get(i).getTipo()));
+        usuarioViewHolder.nivel.setText(" "+String.valueOf(items.get(i).getNivel()));
+        usuarioViewHolder.fecha.setText(" "+String.valueOf(items.get(i).getFecha()));
+        usuarioViewHolder.modulo.setText(" "+String.valueOf(items.get(i).getModulo()));
 
     }
 

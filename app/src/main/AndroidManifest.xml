@@ -29,6 +29,10 @@
             android:name=".registros"
             android:label="@string/title_activity_registros" >
         </activity>
+        <activity
+            android:name=".acerca"
+            android:label="@string/title_activity_acerca" >
+        </activity>
     </application>
 
 </manifest>
